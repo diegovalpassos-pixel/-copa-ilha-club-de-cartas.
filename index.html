@@ -1092,6 +1092,85 @@ body .broadcast .intensity-pills .btn:not(.gold):disabled{color:#f8edce!importan
 body .broadcast .intensity-pills .btn.gold:disabled{color:#211b13!important;background:#e8ce8a!important}
 </style>
 
+
+<style id="v22-clean-style">
+/* Edição 22: restaura o baralho antigo, remove ruído da transmissão */
+html body #cardList .v22-original-card,html body .v22-original-card.player-card{position:relative;overflow:hidden;display:flex;flex-direction:column;text-align:left;width:100%;height:auto;min-height:250px!important;aspect-ratio:auto!important;padding:0!important;border:2px solid #dbcb9b!important;border-radius:13px!important;background:linear-gradient(145deg,#183b2b,#0e271b 60%,#0b1c15)!important;color:#f7ecc9!important;box-shadow:inset 0 0 0 3px #244b36,0 12px 26px #0005!important;transition:transform .2s,box-shadow .2s}
+html body #cardList .v22-original-card::after,html body .v22-original-card.player-card::after{display:none!important}
+#cardList .v22-original-card:hover{transform:translateY(-2px);box-shadow:0 15px 34px #0008}
+#cardList .v22-original-card.is-selected{outline:3px solid #edce80;outline-offset:1px}
+.v22-original-card .card-vintage-head{display:flex;justify-content:space-between;gap:4px;flex-wrap:wrap;color:#e5d299;font-size:8px;font-weight:900;letter-spacing:.07em;padding:11px 11px 4px}
+.v22-original-card .c-top{display:flex;justify-content:space-between;align-items:start;padding:2px 12px;min-height:48px}
+.v22-original-card .ovr{color:#f5dd98;text-shadow:0 2px 0 #0008;font:900 35px/1 Impact,'Arial Black',sans-serif}
+.v22-original-card .role{font:900 9px/1.2 system-ui;color:#f3dfae;letter-spacing:.08em;margin-top:3px}
+.v22-original-card .c-edition{color:#efd592;font-size:25px;line-height:1}
+.v22-original-card .face{position:relative;margin:3px 12px 10px;min-height:92px;display:flex;justify-content:center;align-items:center;background:linear-gradient(145deg,#1c4e36,#133026);border:1px solid #dfc37f;border-radius:8px;box-shadow:inset 0 0 14px #0005}
+.v22-original-card .face svg,.v22-original-card .face .shirt-art{display:block;width:min(120px,85%);height:108px;object-fit:contain}
+.v22-original-card .c-bottom{padding:3px 12px 13px}
+.v22-original-card .card-rarity{color:#f8df94;font:900 10px/1.4 system-ui;letter-spacing:.1em}
+.v22-original-card .c-name{font:900 clamp(15px,2.6vw,19px)/1.1 Georgia,serif;color:#fff5d4;overflow-wrap:anywhere;margin-top:4px}
+.v22-original-card .card-fullname,.v22-original-card .c-club{font-size:10px;color:#d2cdab;line-height:1.3;margin-top:4px;overflow-wrap:anywhere}
+.v22-original-card .c-club b{color:#f3d990}
+.v22-original-card.legend{border-color:#f7d478!important;box-shadow:0 13px 32px rgba(213,165,69,.23),inset 0 0 0 3px #8d692c}
+.v22-original-card.legend .face{background:linear-gradient(145deg,#6c552b,#213b29)}
+.v22-original-card .v22-club-seal{position:absolute;right:10px;bottom:10px;width:22px;height:22px;border-radius:6px;background:#fff5db;padding:2px;object-fit:contain;border:1px solid #e7c986}
+@media(max-width:550px){#cardList .v22-original-card{min-height:235px}.v22-original-card .face{min-height:86px;margin:1px 7px 8px}.v22-original-card .face svg{height:92px}.v22-original-card .card-vintage-head{font-size:7px;padding-left:8px;padding-right:8px}.v22-original-card .c-top,.v22-original-card .c-bottom{padding-left:8px;padding-right:8px}.v22-original-card .c-name{font-size:14px}.v22-original-card .ovr{font-size:29px}}
+/* Transmissão minimalista e controles avançados recolhidos */
+.v22-match{max-width:980px;margin:auto;padding:12px 15px 70px;color:#f7efdc}
+.v22-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px}
+.v22-kicker{font:800 11px system-ui;letter-spacing:.13em;text-transform:uppercase;color:#d7c78e}
+.v22-score{background:linear-gradient(170deg,#1d3929,#10241c);border:1px solid #d2b875;border-radius:22px;box-shadow:0 15px 38px rgba(0,0,0,.27);padding:17px 14px;margin-bottom:15px}
+.v22-score-main{display:grid;grid-template-columns:minmax(0,1fr) minmax(84px,.85fr) minmax(0,1fr);gap:10px;align-items:center}
+.v22-team{text-align:center;display:grid;place-items:center;gap:7px;min-width:0}
+.v22-team .crest-logo{height:52px!important;width:52px!important}
+.v22-team-name{font:800 clamp(12px,2.5vw,15px)/1.2 system-ui;color:#f6edda;overflow-wrap:anywhere;text-align:center}
+.v22-score-center{text-align:center;white-space:nowrap}
+.v22-score-nums{color:#fff3cf;font:900 clamp(33px,9vw,66px)/1 Impact,'Arial Black',sans-serif;letter-spacing:.05em}
+.v22-clock{margin-top:7px;color:#e8d7a5;font:800 12px/1.2 system-ui}
+.v22-score-bar{width:100%;height:5px;border-radius:8px;background:#37533f;overflow:hidden;margin-top:18px}
+.v22-score-bar i{display:block;height:100%;background:linear-gradient(90deg,#d7b75a,#f6e4ad);border-radius:8px}
+.v22-score-sub{display:flex;justify-content:space-between;gap:10px;color:#c9d3bf;font:700 10px system-ui;padding-top:8px}
+.v22-controls{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;margin:13px 0}
+.v22-controls .btn{border-radius:12px;min-height:50px;font:900 12px system-ui;letter-spacing:.04em}
+.v22-controls .btn:disabled{opacity:.55}
+.v22-sim{background:linear-gradient(135deg,#e2ca8b,#c89c50)!important;color:#251d11!important;border:1px solid #f0dd9d!important}
+.v22-narrator{background:#152b21;border:1px solid #536d53;border-radius:17px;padding:16px;margin:12px 0;color:#f7eacd}
+.v22-narrator small{display:block;font:900 10px system-ui;color:#d6bc75;letter-spacing:.1em;margin-bottom:7px}
+.v22-narrator p{margin:0;font:600 15px/1.55 system-ui;color:#f7edda;overflow-wrap:break-word}
+.v22-advanced{background:#101e18;border:1px solid #425744;border-radius:15px;padding:0;margin:14px 0;color:#e7dfc7;overflow:hidden}
+.v22-advanced summary{padding:14px;list-style:none;font:900 12px system-ui;letter-spacing:.04em;display:flex;justify-content:space-between;align-items:center;cursor:pointer}
+.v22-advanced summary::after{content:'⌄';font-size:20px;color:#e6cf8d}
+.v22-advanced[open] summary::after{content:'⌃'}
+.v22-advanced-content{padding:0 14px 16px;display:grid;gap:12px}
+.v22-speed{display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+.v22-speed button,.v22-audio{border:1px solid #6e816b;background:#263c2e;color:#f4eacd;border-radius:9px;font:800 11px system-ui;padding:9px 12px;min-width:52px}
+.v22-speed button.active{background:#e9d194;color:#272014}
+.v22-events{display:grid;gap:8px;max-height:230px;overflow:auto}
+.v22-event{border-left:2px solid #d1ae61;padding:7px 10px;font:500 12px/1.35 system-ui;background:#1c3225;border-radius:5px;color:#e3ddc9}
+.v22-result{text-align:center;background:#1a3929;border:1px solid #d1b76d;border-radius:18px;padding:20px;margin-top:15px}
+.v22-result h2{color:#fee6a3;font-size:29px;margin:0 0 6px}
+.v22-result p{color:#e9e2c9;font:600 14px/1.4 system-ui}
+.v22-result .btn{margin-top:12px}
+.v22-shootout{background:linear-gradient(180deg,#233c30,#12261e);border:2px solid #dbbc6e;border-radius:20px;padding:19px 15px;margin:15px 0;text-align:center;box-shadow:0 15px 32px #0004}
+.v22-shootout h2{color:#ffedb8;font-size:clamp(24px,6vw,34px);line-height:1.1;margin:4px 0 9px}
+.v22-shootout p{color:#e9dfc5;font:500 14px/1.5 system-ui}
+.v22-shootout .v22-pen-score{font:900 33px/1 Impact,sans-serif;color:#fff4d1;margin:12px 0}
+.v22-pen-choice{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:16px 0}
+.v22-pen-choice button{font:800 12px/1.2 system-ui;color:#281e10;background:linear-gradient(180deg,#f3dda0,#dfbd72);border:1px solid #ffe8ae;border-radius:13px;padding:15px 3px;min-height:54px}
+.v22-pen-history{font:700 12px/1.7 system-ui;letter-spacing:.06em;color:#dfd5af;margin:10px auto}
+.v22-choice-card{background:linear-gradient(175deg,#233f30,#10221b);border:1px solid #d7bf7d;border-radius:18px;padding:18px 15px;margin:14px 0;box-shadow:0 12px 26px #0004}
+.v22-choice-card .v22-decision-tag{display:block;color:#eacf7b;font:900 11px system-ui;letter-spacing:.1em;margin-bottom:10px}
+.v22-choice-card h2{color:#fff2d2;font-size:clamp(23px,6vw,32px);margin:0 0 7px;line-height:1.1}
+.v22-choice-card p{color:#e8dfcb;font:500 14px/1.45 system-ui;line-height:1.5;margin:0 0 15px}
+.v22-answers{display:grid;gap:9px}
+.v22-answers button{display:flex;align-items:center;gap:8px;text-align:left;padding:15px;border-radius:12px;background:#304d3a;border:1px solid #71836d;color:#fff0d3;font:800 14px/1.25 system-ui;overflow-wrap:anywhere}
+.v22-answers button:hover,.v22-answers button:focus-visible{background:#44684b;border-color:#edd495}
+.v22-answers button span{display:inline-grid;place-items:center;flex:0 0 25px;width:25px;height:25px;background:#e3c879;color:#281f12;border-radius:7px}
+.v22-sound-prompt{font:700 11px system-ui;color:#f4dbab}
+.v22-match.v22-crowd{position:relative;isolation:isolate}
+.v22-match.v22-crowd::before{content:'';position:absolute;inset:0;background-image:linear-gradient(180deg,rgba(6,16,13,.84),rgba(6,16,13,.94)),var(--crowd);background-position:top center;background-size:cover;opacity:.5;pointer-events:none;z-index:-1}
+@media(max-width:360px){.v22-match{padding:10px 9px 55px}.v22-controls .btn{font-size:11px}.v22-score-main{gap:4px}.v22-team .crest-logo{width:42px!important;height:42px!important}.v22-score{padding:14px 9px}}
+</style>
 </head><body><div class="noise" aria-hidden="true"></div><div id="app"></div><div id="toast" aria-live="polite"></div><script>
 
 /* Gerado de elencos_v08.json por atualizar_dados.py. */
@@ -2732,8 +2811,147 @@ matchScreen=function(){ let html=prevMatch(); const m=s.match, opp=m?teamOf(m.op
 const oldHeader=header;
 header=function(){ let html=oldHeader(); html=html.replace(/<div class="brand-mark">[\s\S]*?<\/div>/, `<div class="brand-mark"><img alt="Copa Ilha" src="${eventLogo}"></div>`); return html; };
 const prevApplyChrome=applyChrome;
-applyChrome=function(){ prevApplyChrome(); document.title='Copa Ilha Club de Cartas — Arquibancada 21 Oficial'; };
+applyChrome=function(){ prevApplyChrome(); document.title='Copa Ilha Club de Cartas — 22.0'; };
 /* ==== FIM DO PATCH ==== */
+
+
+/* ========== ARQUIBANCADA 22 • UI LIMPA, SIMULAÇÃO E PÊNALTIS ========== */
+const V22_EDITION='22.0';
+// Restaura o baralho original (retrato com camisa, overall e moldura), sem perder escudos no placar.
+function v22OriginalCard(p,click=true,hero=false){
+ const t=byId[p.teamId],secret=s.almanaque&&s.stage==='draft',active=s.stage==='draft'&&s.draftPickId===p.id;
+ const quality=p.legend?'LENDÁRIA':p.ovr>=90?'CRAQUE':p.ovr>=85?'RARÍSSIMA':p.ovr>=79?'RARA':'CLÁSSICA';
+ const art=teamArt(t);
+ return `<${click?'button':'div'} ${click?`type="button" data-action="pick" data-id="${esc(p.id)}"`:''} data-search="${esc(norm(p.name+' '+(p.nick||'')))}" class="player-card v22-original-card ${p.legend?'legend':''} ${active?'is-selected':''}" style="--team:${esc(t.color)}" aria-label="${esc(p.name)}: ${secret?'overall oculto':p.ovr+' overall'}">
+ <div class="card-vintage-head"><span>ILHA · ${p.year}</span><span>${p.legend?'✦ ESPECIAL':'COLEÇÃO'}</span></div>
+ <div class="c-top"><div><div class="ovr">${secret?'??':p.ovr}</div><div class="role">${p.role==='GOL'?'GOLEIRO':'LINHA'}</div></div><span class="c-edition">${p.legend?'✦':'★'}</span></div>
+ <div class="face">${jersey(p)}</div>
+ <div class="c-bottom"><div class="card-rarity">${secret?'FORÇA OCULTA':quality}</div><div class="c-name">${esc(p.nick||p.name)}</div>${p.nick?`<div class="card-fullname">${esc(p.name)}</div>`:''}<div class="c-club">${esc(t.equipe)} <b>${p.year}</b></div></div>
+ ${art?.logo?`<img class="v22-club-seal" alt="${esc(t.equipe)}" src="${art.logo}">`:''}
+ </${click?'button':'div'}>`;
+}
+card=v22OriginalCard;
+v8SelectionCard=p=>v22OriginalCard(p,true);
+// O jogo usa sua própria geração de sons (WebAudio); liberar no toque é obrigatório no iOS.
+function v22EnableSound(){
+ s.sound=true;
+ try{initAudio();if(audio){audio.gain.gain.value=.26;audio.ctx.resume().catch(()=>{});}}catch(e){}
+ soundFX('pick');save();
+}
+function v22SlimDecision(){
+ const m=s.match,d=m?.decision;if(!d)return '';
+ const options=d.choices||[];
+ const isBig=/final|penalti|goleiro|jogada/i.test(d.genre||'');
+ return `<section class="v22-choice-card" role="region" aria-label="Sua decisão no jogo"><span class="v22-decision-tag">${isBig?'⚽ CHANCE DECISIVA':'⚡ IMPREVISTO EM CAMPO'} · ${m.minute}' · ${Math.min(m.decisionsTaken+1,3)}/3</span><h2>${esc(d.title)}</h2><p>${esc(d.body)}</p><div class="v22-answers">${options.map((o,i)=>`<button data-action="decide" data-choice="${esc(o.choice)}" ${o.reserve!=null?`data-reserve="${o.reserve}"`:''}><span>${i+1}</span>${esc(o.title)}</button>`).join('')}</div></section>`;
+}
+// Apenas a primeira camada da partida; os detalhes longos vão para uma área recolhível.
+function v22CleanMatch(){
+ const m=s.match,opp=teamOf(m.opponentId),ev=m.events[m.events.length-1],progress=clamp(m.minute/50*100,0,100),art=teamArt(opp);
+ const shoot=m.shootout&&!m.shootout.done;
+ const phase=m.phase==='group'?'FASE DE GRUPOS':m.phase==='semi'?'SEMIFINAL':'FINAL';
+ const teamName=(v)=>`<div class="v22-team">${crest(v,48)}<div class="v22-team-name">${esc(v.id==='me'?s.teamName:short(v))}</div></div>`;
+ return `<div class="main v22-match ${opp.equipe==='Diretoria FC'&&Number(opp.temporada)===2026&&art?.crowd?'v22-crowd':''}" ${opp.equipe==='Diretoria FC'&&Number(opp.temporada)===2026&&art?.crowd?`style="--crowd:url('${art.crowd}')"`:''}>
+  <div class="v22-head"><span class="v22-kicker">COPA ILHA · ${phase}</span><span class="broadcast-status ${m.running?'is-live':''}">${m.finished?'ENCERRADO':shoot?'PÊNALTIS':m.decision||m.penalty?'SUA VEZ':m.running?'AO VIVO':'PAUSADO'}</span></div>
+  <section class="v22-score"><div class="v22-score-main">${teamName(teamOf('me'))}<div class="v22-score-center"><div class="v22-score-nums">${m.score[0]} × ${m.score[1]}</div><div class="v22-clock">${shoot?'PÊNALTIS':m.finished?'FIM DE JOGO':`${m.minute}' / 50'`}</div></div>${teamName(opp)}</div><div class="v22-score-bar"><i style="width:${progress}%"></i></div><div class="v22-score-sub"><span>${shoot?'Decisão do mata-mata':m.minute<=25?'1º tempo':'2º tempo'}</span><span>${m.penalties?`Pênaltis: ${m.penalties[0]} × ${m.penalties[1]}`: 'FUT-8'}</span></div></section>
+  ${shoot?v22ShootoutScreen():m.penalty?penaltyModal(m.penalty):m.decision?v22SlimDecision():''}
+  ${(!m.finished&&!shoot)?`<div class="v22-controls"><button class="btn ${m.running?'outline':'primary'}" data-action="toggleMatch" ${m.penalty||m.decision||m.pending?'disabled':''}>${m.running?'⏸ PAUSAR':'▶ JOGAR'}</button><button class="btn v22-sim" data-action="v22SimMatch">⏩ SIMULAR PARTIDA</button></div>`:''}
+  ${(!shoot&&!m.decision&&!m.penalty)?`<div class="v22-narrator" aria-live="polite"><small>🎙 ÚLTIMO LANCE · ${ev?.minute||0}'</small><p>${esc(ev?.text||'O jogo vai começar!')}</p></div>`:''}
+  ${m.finished?`<section class="v22-result"><h2>${m.result==='win'?'🏆 VITÓRIA!':m.result==='loss'?'FIM DE JOGO':'EMPATE!'}</h2><p>${m.penalties?`Pênaltis: ${m.penalties[0]} × ${m.penalties[1]}. `:''}A próxima etapa da Copa está esperando.</p><button class="btn gold" data-action="finishMatch">CONTINUAR CAMPEONATO →</button></section>`:''}
+  <details class="v22-advanced" id="v22-advanced"><summary>⚙ SOM, VELOCIDADE E HISTÓRICO</summary><div class="v22-advanced-content"><button class="v22-audio" data-action="v22Sound">${s.sound?'🔊 TESTAR / REATIVAR SOM':'🔈 ATIVAR SOM'}</button><span class="v22-sound-prompt">O áudio começa após tocar em um botão no Safari.</span><div class="v22-speed"><span style="font-size:12px">Velocidade</span>${[1,2,4,8].map(n=>`<button data-action="speed" data-speed="${n}" class="${s.speed===n?'active':''}">${n}×</button>`).join('')}</div><div class="v22-events">${m.events.slice(-16).reverse().map(e=>`<div class="v22-event">${e.minute}' · ${esc(e.text)}</div>`).join('')}</div></div></details>
+ </div>`;
+}
+matchScreen=v22CleanMatch;
+// Disputa jogável: o usuário escolhe sempre o canto da própria cobrança e da defesa.
+function v22BeginShootout(){
+ const m=s.match;m.running=false;m.minute=50;m.pending=false;m.decision=null;m.penalty=null;m.penaltyMinute=null;clearTimer();
+ m.shootout={scores:[0,0],shots:[0,0],turn:0,history:[],done:false};
+ addEvent('Fim do tempo normal! O empate no mata-mata será resolvido nos pênaltis. Você vai cobrar e defender!','normal');
+ soundFX('whistle');save();render();
+}
+function v22ShootoutScreen(){
+ const m=s.match,sh=m.shootout,att=sh.turn%2===0,round=Math.floor(sh.turn/2)+1;
+ const shooters=att?userLineup().slice(1):m.enemy.slice(1),shooter=shooters[(round-1)%shooters.length];
+ return `<section class="v22-shootout"><span class="v22-kicker">⚽ DECISÃO POR PÊNALTIS · ${round}ª SÉRIE</span><h2>${att?'SUA COBRANÇA':'SUA DEFESA'}</h2><div class="v22-pen-score">${sh.scores[0]} × ${sh.scores[1]}</div><p>${att?`${esc(shooter?.nick||shooter?.name||'Seu jogador')} vai bater. Escolha onde chutar!`:`${esc(shooter?.nick||shooter?.name||'O adversário')} vai bater. Escolha para onde seu goleiro vai pular!`}</p><div class="v22-pen-choice"><button data-action="v22Pen" data-dir="esquerda">↖ ESQUERDA</button><button data-action="v22Pen" data-dir="meio">↑ MEIO</button><button data-action="v22Pen" data-dir="direita">↗ DIREITA</button></div><div class="v22-pen-history">${sh.history.slice(-5).map(h=>`${h.side===0?'VOCÊ':'RIVAL'} ${h.goal?'⚽':'🧤'}`).join(' · ')||'Escolha seu primeiro lance'}</div><button class="btn outline" data-action="v22SimPens">Simular disputa de pênaltis</button></section>`;
+}
+function v22FinishShootout(){
+ const m=s.match,sh=m.shootout;
+ m.penalties=[...sh.scores];m.result=sh.scores[0]>sh.scores[1]?'win':'loss';m.finished=true;m.running=false;sh.done=true;
+ addEvent(`${m.result==='win'?'Seu time':'O adversário'} venceu nos pênaltis por ${sh.scores[0]} a ${sh.scores[1]}.`,'normal');
+ soundFX(m.result==='win'?'goal':'whistle');save();render();
+}
+function v22PenaltyChoice(dir,silent=false){
+ const m=s.match,sh=m?.shootout;
+ if(!sh||sh.done||!['esquerda','meio','direita'].includes(dir))return;
+ const side=sh.turn%2,round=Math.floor(sh.turn/2),att=side===0;
+ const strikers=att?userLineup().slice(1):m.enemy.slice(1);
+ const shooter=strikers[round%strikers.length],keeper=att?m.enemy[0]:userLineup()[0];
+ const enemyChoice=pick(['esquerda','meio','direita']);
+ const shootDir=att?dir:enemyChoice,keeperDir=att?enemyChoice:dir;
+ const prob=clamp((shootDir===keeperDir?.19:.80)+((shooter?.ovr||76)-75)*.009-((keeper?.ovr||76)-75)*.008,.06,.95);
+ const goal=Math.random()<prob;
+ sh.scores[side]+=goal?1:0;sh.shots[side]++;
+ sh.history.push({side,shot:shootDir,dive:keeperDir,goal,by:shooter?.nick||shooter?.name||'Jogador'});sh.turn++;
+ addEvent(`${att?'Sua cobrança':'Cobrança do rival'}: ${shooter?.nick||shooter?.name} bate em ${shootDir}, goleiro vai para ${keeperDir}. ${goal?'⚽ Gol!':'🧤 Defendeu!'}`,goal?'goal':'save',side);
+ if(!silent)soundFX(goal?'goal':'save');
+ const [a,b]=sh.scores,[na,nb]=sh.shots;
+ // Encerramento antecipado em 5 séries, depois morte súbita com duas cobranças por rodada.
+ const early=(na<=5&&nb<=5&&(a>b+Math.max(0,5-nb)||b>a+Math.max(0,5-na)));
+ const complete=(na===nb&&na>=5&&a!==b);
+ if(early||complete){v22FinishShootout();return;}
+ if(!silent){save();render();}
+}
+function v22SimulateShootout(){
+ let i=0;while(s.match?.shootout&&!s.match.shootout.done&&i++<60){v22PenaltyChoice(pick(['esquerda','meio','direita']),true);}
+ // Improbabilíssimo empate infinito: desempata com cobrança extra de morte súbita.
+ if(s.match?.shootout&&!s.match.shootout.done){s.match.shootout.scores[pick([0,1])]++;v22FinishShootout();}
+}
+const v22OldFinalWhistle=finalWhistle;
+finalWhistle=function(){
+ const m=s.match;if(!m||m.finished||m.shootout||m.pending)return;
+ if(m.phase!=='group'&&m.score[0]===m.score[1]){v22BeginShootout();return;}
+ v22OldFinalWhistle();
+};
+function v22Poisson(l){let n=0,acc=1,limit=Math.exp(-l);do{acc*=Math.random();if(acc>limit)n++;}while(acc>limit&&n<9);return n;}
+function v22QuickSim(){
+ const m=s.match;if(!m||m.finished)return;
+ if(m.shootout&&!m.shootout.done){v22SimulateShootout();return;}
+ m.running=false;m.pending=false;m.currentPlay=null;m.decision=null;m.penalty=null;m.penaltyMinute=null;m.penaltyUsed=true;m.showTactics=false;clearTimer();
+ if(Array.isArray(m.decisionQueue))m.decisionQueue.forEach(e=>e.used=true);
+ const remaining=clamp((50-m.minute)/50,0,1);
+ const diff=clamp(teamStrength('me')-teamStrength(m.opponentId),-22,22);
+ const goals=[v22Poisson(clamp((1.8+diff*.045)*remaining,.05,4)),v22Poisson(clamp((1.8-diff*.045)*remaining,.05,4))];
+ for(let side=0;side<2;side++){
+   for(let k=0;k<goals[side];k++){
+      const pool=side===0?userLineup().slice(1):m.enemy.slice(1),shooter=pick(pool),assist=pick(pool.filter(x=>x.id!==shooter.id));
+      const at=clamp(m.minute+rand(1,Math.max(1,50-m.minute)),1,50);
+      m.goals.push({minute:at,name:shooter.name,side,scorerId:shooter.id,assistId:assist?.id||null});
+      m.score[side]++;
+      m.events.push({minute:at,kind:'goal',side,text:`⚽ ${shooter.nick||shooter.name} marca para ${side===0?s.teamName:short(teamOf(m.opponentId))}!`});
+   }
+ }
+ m.events.sort((a,b)=>a.minute-b.minute);
+ m.minute=50;m.lastDecision=null;addEvent('Simulação concluída. Tempo regulamentar encerrado.','normal');
+ if(m.phase!=='group'&&m.score[0]===m.score[1]){
+   v22BeginShootout();v22SimulateShootout();return;
+ }
+ finalWhistle();
+}
+// Som do jogo é sintetizado pelo próprio navegador; requer gesto do usuário no iOS.
+const v22App=document.getElementById('app');
+v22App.addEventListener('click',function(e){
+ const b=e.target.closest('[data-action]');if(!b)return;
+ if(!['v22Sound','v22SimMatch','v22Pen','v22SimPens'].includes(b.dataset.action))return;
+ e.preventDefault();e.stopImmediatePropagation();
+ if(b.dataset.action==='v22Sound'){v22EnableSound();toast('Som ativado. Aumente o volume do celular.');render();return;}
+ if(b.dataset.action==='v22SimMatch'){v22EnableSound();v22QuickSim();return;}
+ if(b.dataset.action==='v22Pen'){v22EnableSound();v22PenaltyChoice(b.dataset.dir);return;}
+ if(b.dataset.action==='v22SimPens'){v22EnableSound();v22SimulateShootout();return;}
+},true);
+const v22PreviousRender=render;
+render=function(){v22PreviousRender();document.title='Copa Ilha Club de Cartas · 22.0';};
+// expõe apenas para testes locais.
+window.__v22Test={simulate:v22QuickSim,beginShootout:v22BeginShootout,kick:v22PenaltyChoice,finish:finalWhistle,forceKnockoutTie:()=>{if(!s.match)return;s.match.phase='semi';s.match.score=[1,1];s.match.pending=false;s.match.minute=50;finalWhistle();}};
+/* ========== FIM V22 ========== */
 
 render();
 
