@@ -1094,27 +1094,7 @@ body .broadcast .intensity-pills .btn.gold:disabled{color:#211b13!important;back
 
 
 <style id="v22-clean-style">
-/* Edição 22: restaura o baralho antigo, remove ruído da transmissão */
-html body #cardList .v22-original-card,html body .v22-original-card.player-card{position:relative;overflow:hidden;display:flex;flex-direction:column;text-align:left;width:100%;height:auto;min-height:250px!important;aspect-ratio:auto!important;padding:0!important;border:2px solid #dbcb9b!important;border-radius:13px!important;background:linear-gradient(145deg,#183b2b,#0e271b 60%,#0b1c15)!important;color:#f7ecc9!important;box-shadow:inset 0 0 0 3px #244b36,0 12px 26px #0005!important;transition:transform .2s,box-shadow .2s}
-html body #cardList .v22-original-card::after,html body .v22-original-card.player-card::after{display:none!important}
-#cardList .v22-original-card:hover{transform:translateY(-2px);box-shadow:0 15px 34px #0008}
-#cardList .v22-original-card.is-selected{outline:3px solid #edce80;outline-offset:1px}
-.v22-original-card .card-vintage-head{display:flex;justify-content:space-between;gap:4px;flex-wrap:wrap;color:#e5d299;font-size:8px;font-weight:900;letter-spacing:.07em;padding:11px 11px 4px}
-.v22-original-card .c-top{display:flex;justify-content:space-between;align-items:start;padding:2px 12px;min-height:48px}
-.v22-original-card .ovr{color:#f5dd98;text-shadow:0 2px 0 #0008;font:900 35px/1 Impact,'Arial Black',sans-serif}
-.v22-original-card .role{font:900 9px/1.2 system-ui;color:#f3dfae;letter-spacing:.08em;margin-top:3px}
-.v22-original-card .c-edition{color:#efd592;font-size:25px;line-height:1}
-.v22-original-card .face{position:relative;margin:3px 12px 10px;min-height:92px;display:flex;justify-content:center;align-items:center;background:linear-gradient(145deg,#1c4e36,#133026);border:1px solid #dfc37f;border-radius:8px;box-shadow:inset 0 0 14px #0005}
-.v22-original-card .face svg,.v22-original-card .face .shirt-art{display:block;width:min(120px,85%);height:108px;object-fit:contain}
-.v22-original-card .c-bottom{padding:3px 12px 13px}
-.v22-original-card .card-rarity{color:#f8df94;font:900 10px/1.4 system-ui;letter-spacing:.1em}
-.v22-original-card .c-name{font:900 clamp(15px,2.6vw,19px)/1.1 Georgia,serif;color:#fff5d4;overflow-wrap:anywhere;margin-top:4px}
-.v22-original-card .card-fullname,.v22-original-card .c-club{font-size:10px;color:#d2cdab;line-height:1.3;margin-top:4px;overflow-wrap:anywhere}
-.v22-original-card .c-club b{color:#f3d990}
-.v22-original-card.legend{border-color:#f7d478!important;box-shadow:0 13px 32px rgba(213,165,69,.23),inset 0 0 0 3px #8d692c}
-.v22-original-card.legend .face{background:linear-gradient(145deg,#6c552b,#213b29)}
-.v22-original-card .v22-club-seal{position:absolute;right:10px;bottom:10px;width:22px;height:22px;border-radius:6px;background:#fff5db;padding:2px;object-fit:contain;border:1px solid #e7c986}
-@media(max-width:550px){#cardList .v22-original-card{min-height:235px}.v22-original-card .face{min-height:86px;margin:1px 7px 8px}.v22-original-card .face svg{height:92px}.v22-original-card .card-vintage-head{font-size:7px;padding-left:8px;padding-right:8px}.v22-original-card .c-top,.v22-original-card .c-bottom{padding-left:8px;padding-right:8px}.v22-original-card .c-name{font-size:14px}.v22-original-card .ovr{font-size:29px}}
+/* Cartas: comportamento e desenho da edição inaugural, sem substituições artificiais. */
 /* Transmissão minimalista e controles avançados recolhidos */
 .v22-match{max-width:980px;margin:auto;padding:12px 15px 70px;color:#f7efdc}
 .v22-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px}
@@ -1170,6 +1150,51 @@ html body #cardList .v22-original-card::after,html body .v22-original-card.playe
 .v22-match.v22-crowd{position:relative;isolation:isolate}
 .v22-match.v22-crowd::before{content:'';position:absolute;inset:0;background-image:linear-gradient(180deg,rgba(6,16,13,.84),rgba(6,16,13,.94)),var(--crowd);background-position:top center;background-size:cover;opacity:.5;pointer-events:none;z-index:-1}
 @media(max-width:360px){.v22-match{padding:10px 9px 55px}.v22-controls .btn{font-size:11px}.v22-score-main{gap:4px}.v22-team .crest-logo{width:42px!important;height:42px!important}.v22-score{padding:14px 9px}}
+</style>
+
+<style id="v23-board-style">
+/* Card styling intentionally inherited unchanged from the original edition (2006) */
+.player-card.is-selected{outline:3px solid #fff1bd;outline-offset:2px;}
+#cardList .player-card{min-width:0;max-width:100%;}
+#cardList .player-card .c-club{color:#f9e7bd;}
+#cardList .player-card .card-fullname{color:#fff3d6;}
+#cardList .player-card.legend{border-color:#fff1ae;}
+/* A scoreboard that looks like a real stadium broadcast, without hiding scorers */
+.v23-scoreboard{background:linear-gradient(160deg,#263a30 0%,#142922 48%,#0c211d 100%);border:2px solid #d7bc76;border-radius:19px;box-shadow:0 17px 42px rgba(0,0,0,.35),inset 0 0 0 1px #fbebba22;overflow:hidden;color:#fff4db;margin-bottom:16px;}
+.v23-scoreboard::before{content:'';display:block;height:5px;background:linear-gradient(90deg,#b17a3b,#fff1b7,#d5a94b,#e9cb82);}
+.v23-score-top{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:12px 17px;border-bottom:1px solid rgba(242,223,164,.15);font:900 10px/1.2 'Trebuchet MS',Arial,sans-serif;letter-spacing:.15em;text-transform:uppercase;color:#e9d5a1;}
+.v23-score-top .v23-score-live{border-radius:999px;background:rgba(223,191,112,.1);border:1px solid #dcc37c44;color:#fff1cc;padding:6px 10px;letter-spacing:.07em;}
+.v23-score-mid{display:grid;grid-template-columns:minmax(0,1fr) minmax(90px,1.15fr) minmax(0,1fr);gap:12px;align-items:center;padding:19px 18px 14px;background:radial-gradient(ellipse at 50% 0%,#d7be7230,transparent 55%);}
+.v23-team-col{display:grid;justify-items:center;align-content:center;text-align:center;gap:9px;min-width:0;}
+.v23-team-col .crest-logo{width:64px!important;height:68px!important;border-radius:16px;box-shadow:0 8px 14px #0006,inset 0 0 0 1px #f8e8b5!important;}
+.v23-team-name{font:900 clamp(12px,3.1vw,17px)/1.22 'Trebuchet MS',Arial,sans-serif;color:#fff4dc;overflow-wrap:anywhere;max-width:100%;}
+.v23-center{text-align:center;display:grid;justify-items:center;gap:5px;}
+.v23-score-number{font:900 clamp(44px,11vw,77px)/.98 Impact,'Arial Black',sans-serif;color:#fff4d4;display:flex;justify-content:center;align-items:center;gap:clamp(8px,2.8vw,19px);text-shadow:1px 4px 0 #08120da3;white-space:nowrap;}
+.v23-score-number .v23-separator{font-size:.62em;color:#e2bd6d;text-shadow:none;}
+.v23-match-clock{font:900 11px/1.2 'Trebuchet MS',Arial,sans-serif;color:#e8d2a0;letter-spacing:.11em;}
+.v23-goals-area{border-top:1px solid rgba(242,223,164,.17);background:linear-gradient(180deg,rgba(5,16,13,.26),rgba(5,16,13,.48));padding:13px 15px 15px;display:grid;grid-template-columns:minmax(0,1fr) 18px minmax(0,1fr);gap:8px;align-items:start;}
+.v23-goals-team{min-width:0;display:grid;gap:6px;align-content:start;}
+.v23-goals-team:last-child{text-align:right;}
+.v23-goals-team h4{font:900 9px/1.1 'Trebuchet MS',Arial,sans-serif;letter-spacing:.14em;color:#d5ba82;margin:0 0 4px;text-transform:uppercase;}
+.v23-goals-team .v23-goals-row{display:flex;align-items:baseline;justify-content:flex-start;gap:5px;font:800 clamp(10px,2.5vw,13px)/1.35 'Trebuchet MS',Arial,sans-serif;color:#fff0d6;min-width:0;overflow-wrap:anywhere;}
+.v23-goals-team:last-child .v23-goals-row{justify-content:flex-end;}
+.v23-goals-row b{color:#f8d684;font-weight:900;white-space:nowrap;}
+.v23-goals-row span{min-width:0;}
+.v23-goals-empty{font:600 11px/1.4 'Trebuchet MS',Arial,sans-serif;color:#c7cbb8;opacity:.77;}
+.v23-goals-separator{width:1px;height:100%;min-height:36px;background:linear-gradient(180deg,transparent,#d7ba7966,transparent);margin:auto;}
+.v23-score-progress{height:5px;margin:0 15px 9px;background:#45635275;border-radius:9px;overflow:hidden;}
+.v23-score-progress span{display:block;height:100%;background:linear-gradient(90deg,#ad874b,#f1d58f);border-radius:9px;transition:width .3s ease;}
+.v23-score-bottom{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:0 17px 13px;font:900 10px/1.3 'Trebuchet MS',Arial,sans-serif;letter-spacing:.04em;color:#d7d2ba;}
+@media(max-width:460px){
+ .v23-score-top{padding:10px 12px;font-size:9px;letter-spacing:.08em;}
+ .v23-score-mid{padding:17px 10px 12px;gap:5px;grid-template-columns:minmax(0,1fr) minmax(90px,1.08fr) minmax(0,1fr);}
+ .v23-score-number{font-size:clamp(41px,11vw,54px);gap:7px;}
+ .v23-team-name{font-size:11px;}
+ .v23-team-col .crest-logo{width:50px!important;height:54px!important;}
+ .v23-goals-area{padding:12px 10px;gap:5px;grid-template-columns:minmax(0,1fr) 7px minmax(0,1fr);}
+ .v23-goals-team .v23-goals-row{font-size:11px;gap:3px;}
+ .v23-goals-team h4{font-size:8px;}
+}
 </style>
 </head><body><div class="noise" aria-hidden="true"></div><div id="app"></div><div id="toast" aria-live="polite"></div><script>
 
@@ -2845,19 +2870,29 @@ function v22SlimDecision(){
  return `<section class="v22-choice-card" role="region" aria-label="Sua decisão no jogo"><span class="v22-decision-tag">${isBig?'⚽ CHANCE DECISIVA':'⚡ IMPREVISTO EM CAMPO'} · ${m.minute}' · ${Math.min(m.decisionsTaken+1,3)}/3</span><h2>${esc(d.title)}</h2><p>${esc(d.body)}</p><div class="v22-answers">${options.map((o,i)=>`<button data-action="decide" data-choice="${esc(o.choice)}" ${o.reserve!=null?`data-reserve="${o.reserve}"`:''}><span>${i+1}</span>${esc(o.title)}</button>`).join('')}</div></section>`;
 }
 // Apenas a primeira camada da partida; os detalhes longos vão para uma área recolhível.
+
+function v23GoalHistory(side){
+ const list=(s.match.goals||[]).filter(g=>Number(g.side)===side).sort((a,b)=>Number(a.minute)-Number(b.minute));
+ if(!list.length)return '<div class="v23-goals-empty">—</div>';
+ return list.map(g=>`<div class="v23-goals-row"><span>⚽ ${esc(g.name||'Jogador')}</span><b>${Math.round(Number(g.minute)||0)}'</b></div>`).join('');
+}
 function v22CleanMatch(){
  const m=s.match,opp=teamOf(m.opponentId),ev=m.events[m.events.length-1],progress=clamp(m.minute/50*100,0,100),art=teamArt(opp);
  const shoot=m.shootout&&!m.shootout.done;
  const phase=m.phase==='group'?'FASE DE GRUPOS':m.phase==='semi'?'SEMIFINAL':'FINAL';
- const teamName=(v)=>`<div class="v22-team">${crest(v,48)}<div class="v22-team-name">${esc(v.id==='me'?s.teamName:short(v))}</div></div>`;
+ const teamName=(v)=>`<div class="v23-team-col">${crest(v,64)}<div class="v23-team-name">${esc(v.id==='me'?s.teamName:short(v))}</div></div>`;
+ const stateName=m.finished?'ENCERRADO':shoot?'DISPUTA DE PÊNALTIS':m.decision||m.penalty?'SUA VEZ':m.running?'AO VIVO':'PAUSADO';
  return `<div class="main v22-match ${opp.equipe==='Diretoria FC'&&Number(opp.temporada)===2026&&art?.crowd?'v22-crowd':''}" ${opp.equipe==='Diretoria FC'&&Number(opp.temporada)===2026&&art?.crowd?`style="--crowd:url('${art.crowd}')"`:''}>
-  <div class="v22-head"><span class="v22-kicker">COPA ILHA · ${phase}</span><span class="broadcast-status ${m.running?'is-live':''}">${m.finished?'ENCERRADO':shoot?'PÊNALTIS':m.decision||m.penalty?'SUA VEZ':m.running?'AO VIVO':'PAUSADO'}</span></div>
-  <section class="v22-score"><div class="v22-score-main">${teamName(teamOf('me'))}<div class="v22-score-center"><div class="v22-score-nums">${m.score[0]} × ${m.score[1]}</div><div class="v22-clock">${shoot?'PÊNALTIS':m.finished?'FIM DE JOGO':`${m.minute}' / 50'`}</div></div>${teamName(opp)}</div><div class="v22-score-bar"><i style="width:${progress}%"></i></div><div class="v22-score-sub"><span>${shoot?'Decisão do mata-mata':m.minute<=25?'1º tempo':'2º tempo'}</span><span>${m.penalties?`Pênaltis: ${m.penalties[0]} × ${m.penalties[1]}`: 'FUT-8'}</span></div></section>
-  ${shoot?v22ShootoutScreen():m.penalty?penaltyModal(m.penalty):m.decision?v22SlimDecision():''}
-  ${(!m.finished&&!shoot)?`<div class="v22-controls"><button class="btn ${m.running?'outline':'primary'}" data-action="toggleMatch" ${m.penalty||m.decision||m.pending?'disabled':''}>${m.running?'⏸ PAUSAR':'▶ JOGAR'}</button><button class="btn v22-sim" data-action="v22SimMatch">⏩ SIMULAR PARTIDA</button></div>`:''}
-  ${(!shoot&&!m.decision&&!m.penalty)?`<div class="v22-narrator" aria-live="polite"><small>🎙 ÚLTIMO LANCE · ${ev?.minute||0}'</small><p>${esc(ev?.text||'O jogo vai começar!')}</p></div>`:''}
-  ${m.finished?`<section class="v22-result"><h2>${m.result==='win'?'🏆 VITÓRIA!':m.result==='loss'?'FIM DE JOGO':'EMPATE!'}</h2><p>${m.penalties?`Pênaltis: ${m.penalties[0]} × ${m.penalties[1]}. `:''}A próxima etapa da Copa está esperando.</p><button class="btn gold" data-action="finishMatch">CONTINUAR CAMPEONATO →</button></section>`:''}
-  <details class="v22-advanced" id="v22-advanced"><summary>⚙ SOM, VELOCIDADE E HISTÓRICO</summary><div class="v22-advanced-content"><button class="v22-audio" data-action="v22Sound">${s.sound?'🔊 TESTAR / REATIVAR SOM':'🔈 ATIVAR SOM'}</button><span class="v22-sound-prompt">O áudio começa após tocar em um botão no Safari.</span><div class="v22-speed"><span style="font-size:12px">Velocidade</span>${[1,2,4,8].map(n=>`<button data-action="speed" data-speed="${n}" class="${s.speed===n?'active':''}">${n}×</button>`).join('')}</div><div class="v22-events">${m.events.slice(-16).reverse().map(e=>`<div class="v22-event">${e.minute}' · ${esc(e.text)}</div>`).join('')}</div></div></details>
+   <section class="v23-scoreboard" aria-label="Placar ao vivo e autores dos gols"><div class="v23-score-top"><span>🏆 COPA ILHA · ${phase}</span><span class="v23-score-live">${stateName}</span></div>
+    <div class="v23-score-mid">${teamName(teamOf('me'))}<div class="v23-center"><div class="v23-score-number"><span>${m.score[0]}</span><span class="v23-separator">:</span><span>${m.score[1]}</span></div><div class="v23-match-clock">${shoot?'PÊNALTIS':m.finished?'APITO FINAL':`${m.minute}' / 50'`}</div></div>${teamName(opp)}</div>
+    <div class="v23-goals-area"><div class="v23-goals-team"><h4>GOLS DO SEU TIME</h4>${v23GoalHistory(0)}</div><div class="v23-goals-separator"></div><div class="v23-goals-team"><h4>GOLS DO ADVERSÁRIO</h4>${v23GoalHistory(1)}</div></div>
+    <div class="v23-score-progress"><span style="width:${progress}%"></span></div><div class="v23-score-bottom"><span>${shoot?'Pênaltis em andamento':m.minute<=25?'1º TEMPO':'2º TEMPO'}</span><span>${m.penalties?`PÊNALTIS ${m.penalties[0]} × ${m.penalties[1]}`:'FUT-8 · DIA DE JOGO'}</span></div>
+   </section>
+   ${shoot?v22ShootoutScreen():m.penalty?penaltyModal(m.penalty):m.decision?v22SlimDecision():''}
+   ${(!m.finished&&!shoot)?`<div class="v22-controls"><button class="btn ${m.running?'outline':'primary'}" data-action="toggleMatch" ${m.penalty||m.decision||m.pending?'disabled':''}>${m.running?'⏸ PAUSAR':'▶ JOGAR'}</button><button class="btn v22-sim" data-action="v22SimMatch">⏩ SIMULAR PARTIDA</button></div>`:''}
+   ${(!shoot&&!m.decision&&!m.penalty)?`<div class="v22-narrator" aria-live="polite"><small>🎙 ÚLTIMO LANCE · ${ev?.minute||0}'</small><p>${esc(ev?.text||'O jogo vai começar!')}</p></div>`:''}
+   ${m.finished?`<section class="v22-result"><h2>${m.result==='win'?'🏆 VITÓRIA!':m.result==='loss'?'FIM DE JOGO':'EMPATE!'}</h2><p>${m.penalties?`Pênaltis: ${m.penalties[0]} × ${m.penalties[1]}. `:''}A próxima etapa da Copa está esperando.</p><button class="btn gold" data-action="finishMatch">CONTINUAR CAMPEONATO →</button></section>`:''}
+   <details class="v22-advanced" id="v22-advanced"><summary>⚙ SOM, VELOCIDADE E HISTÓRICO</summary><div class="v22-advanced-content"><button class="v22-audio" data-action="v22Sound">${s.sound?'🔊 TESTAR / REATIVAR SOM':'🔈 ATIVAR SOM'}</button><span class="v22-sound-prompt">O áudio começa após tocar em um botão no Safari.</span><div class="v22-speed"><span style="font-size:12px">Velocidade</span>${[1,2,4,8].map(n=>`<button data-action="speed" data-speed="${n}" class="${s.speed===n?'active':''}">${n}×</button>`).join('')}</div><div class="v22-events">${m.events.slice(-16).reverse().map(e=>`<div class="v22-event">${e.minute}' · ${esc(e.text)}</div>`).join('')}</div></div></details>
  </div>`;
 }
 matchScreen=v22CleanMatch;
@@ -2948,11 +2983,19 @@ v22App.addEventListener('click',function(e){
  if(b.dataset.action==='v22SimPens'){v22EnableSound();v22SimulateShootout();return;}
 },true);
 const v22PreviousRender=render;
-render=function(){v22PreviousRender();document.title='Copa Ilha Club de Cartas · 22.0';};
+render=function(){v22PreviousRender();document.title='Copa Ilha Club de Cartas · 23.0';};
 // expõe apenas para testes locais.
 window.__v22Test={simulate:v22QuickSim,beginShootout:v22BeginShootout,kick:v22PenaltyChoice,finish:finalWhistle,forceKnockoutTie:()=>{if(!s.match)return;s.match.phase='semi';s.match.score=[1,1];s.match.pending=false;s.match.minute=50;finalWhistle();}};
 /* ========== FIM V22 ========== */
 
+
+/* ===== EDIÇÃO 23: PRIMEIRO BARALHO (FONTE ORIGINAL) ===== */
+function v23FirstCard(p,click=true,hero=false){const t=byId[p.teamId];const secret=s.almanaque&&s.stage==='draft';const quality=p.legend?'LENDÁRIA':p.ovr>=90?'CRAQUE':p.ovr>=85?'RARÍSSIMA':p.ovr>=79?'RARA':'CLÁSSICA';const rating=secret?'??':p.ovr;const tag=secret?'FORÇA OCULTA':quality;return `<${click?'button':'div'} ${click?'type="button" data-action="pick" data-id="'+esc(p.id)+'"':''} data-search="${esc(norm(p.name+' '+(p.nick||'')))}" class="player-card ${p.legend?'legend':''} ${secret?'secret-card':''} ${s.draftPickId===p.id?'is-selected':''}" style="--team:${esc(t.color)}" aria-label="${esc(p.name)} ${secret?'overall oculto':p.ovr+' overall'} ${p.role}"><div class="card-vintage-head"><span>ILHA · ${p.year}</span><span>EDIÇÃO 0${p.legend?'1':'4'}</span></div><div class="c-top"><div><div class="ovr">${rating}</div><div class="role">${p.role==='GOL'?'GOLEIRO':'LINHA'}</div></div><span class="c-edition">${p.legend?'✦':'★'}</span></div><div class="face">${jersey(p)}</div><div class="c-bottom"><div class="card-rarity">${tag}</div><div class="c-name">${esc(p.nick||p.name)}</div>${p.nick?`<div class="card-fullname">${esc(p.name)}</div>`:''}<div class="c-club">${esc(t.equipe)} <b>${p.year}</b></div></div></${click?'button':'div'}>`;}
+card=v23FirstCard;
+cardHTML=v23FirstCard;
+v8SelectionCard=p=>v23FirstCard(p,true);
+window.__v23Test={card:v23FirstCard,scorers:v23GoalHistory};
+/* ===== FIM EDIÇÃO 23 ===== */
 render();
 
 window.__copaTest={v20Surprises:V20_SURPRISES,v20QueueTest:()=>v19MakeQueue(),v18Ranks,v18MakeQueue,beginMatch,finishMatch,beginDecision,decide,matchMomentum,getState:()=>JSON.parse(JSON.stringify(s)),getTeams:()=>teams,randomPlayer,advanceTime,simulateFixture,standing,resolvePlay,penaltyKick,forcePenalty:(side=0)=>{s.match.penalty={side,shooterId:userLineup()[6].id,shooterName:userLineup()[6].name};s.match.running=false;render();},forcePlay:(side=0)=>startPlay(makePlay(side)),fastFinish:()=>{if(s.match?.pending)resolvePlay(s.match.currentPlay.id);s.match.penalty=null;s.match.minute=50;finalWhistle();}};
